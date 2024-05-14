@@ -13,14 +13,8 @@ h1 {
     font-size: 200%;
 }
 
-.col {
-    width: 33.33%;
-    float: left;
-}
-
 #menu1, #menu2, #menu3 {
-    width: 90%;
-    margin: 0 5% 0 5%;
+    margin: 20px;
     background-color: lightgray;
     border: 2px solid black;
     position: relative;
@@ -48,3 +42,21 @@ h1 {
 #menu1 > p.name {background-color: palevioletred;}
 #menu2 > p.name {background-color: darkred; color: white;}
 #menu3 > p.name {background-color: bisque;}
+
+@media (min-width: 992px) {
+    .col {
+        width: 33.33%;
+        float: left;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+    .col:nth-child(1), .col:nth-child(2) {
+        width: 50%;
+        float: left;
+    }
+    .col:nth-child(3) {
+        width: 100%;
+        float: left;
+    }
+}
